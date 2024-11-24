@@ -1,0 +1,66 @@
+$primary-color: #3498db;
+$button-color: #3498dbb5;
+
+@mixin gradient($color1, $color2) {
+  background: linear-gradient(to bottom, $color1, $color2);
+}
+
+html,
+body {
+  font-family: "DM Sans", sans-serif;
+  @include gradient(#ffffff, #00a756);
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.heading {
+  text-align: center;
+  color: $primary-color;
+  padding: 30px 0px 70px 0px;
+}
+
+.input-section,
+.reset-section {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+
+  input,
+  select,
+  button {
+    width: 15vw;
+    margin: 20px 30px 70px 0px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border-width: thin;
+  }
+  #reset-btn {
+    margin: 5px 0px 0px 0px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border-width: thin;
+  }
+  button {
+    background-color: $button-color;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.summary-section {
+  text-align: center;
+  margin: 20px;
+
+  h2,
+  p {
+    margin: 60px 0px 0px 0px;
+  }
+}
